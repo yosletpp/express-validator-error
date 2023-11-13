@@ -9,7 +9,7 @@ app.post(
   (req, res) => {
     const result = validationResult(req);
     if (result.isEmpty()) {
-      return res.send(`Hello, ${body}!`);
+      return res.send(`Hello, ${req.body}!`);
     }
 
     res.send({ errors: result.array() });
